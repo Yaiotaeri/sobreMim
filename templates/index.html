@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jvmendes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body>
+    <header class="menu">
+        <section class="menuI">
+            <h2 class="logo">JvMendes</h2>
+
+            <img id="menuBurguer" src="../static/imgs/perfil.png" alt="menuBurguer" width="48px">
+        </section>
+
+    </header>
+    <div class="baseMenu">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#redesS">Redes Sociais</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </div>
+    <section class="sobreSec">
+        <div class="sobreI" id="sobre">
+
+            <div class="baseInfoSobre">
+                <div class="baseInfoSobreI">
+                    <h1>Olá, me chamo João</h1>
+                <p>Sou desenvolvedor web apaixonado por tecnologia e inovação. Crio sites modernos, responsivos e com
+                    foco em performance.</p>
+                <p>Atualmente, estudo Engenharia de Software e tenho experiência com FrontEnd e BackEnd.</p>
+                <button id="goContact">Entre em contato</button>
+                </div>
+            </div>
+
+            <div class="baseImgSobre">
+                <img src="../static/imgs/eu.jpg" alt="joao">
+            </div>
+        </div>
+    </section>
+
+    <section class="secaoPadrao" id="redesS">
+
+        <div class="textRedesS">
+            <h1>Redes Sociais</h1>
+        </div>
+
+        <div class="redesSociaisBase" >
+            <div class="wtzpIcon baseIcon">
+                <img src="../static/imgs/wtszp.png" alt="whatsapp" id="iconWtszp">
+            </div>
+
+            <div class="instaIcon baseIcon">
+                <img src="../static/imgs/instaa.png" alt="instagram" id="iconInsta">
+            </div>
+
+            <div class="linkIcon baseIcon">
+                <img src="../static/imgs/linkedinIcon.png" alt="linkedin" id="iconLinkedin">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="secaoClara">
+    <div class="baseContact" id="contato">
+        <form class="formContact">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nomeForm" placeholder="Paulo" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="emailForm" placeholder="****@gmail.com" required>
+
+            <label for="tel">Telefone</label>
+            <input type="tel" id="telForm" placeholder="(**) *****-****" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="messageForm" placeholder="Escreva algo..." required></textarea>
+            <h2 id="emailSucess">E-mail enviado com sucesso!</h2>
+            <h2 id="emailFail">Erro ao enviar E-mail!</h2>
+            <button type="submit">Enviar mensagem</button>
+        </form>
+    </div>
+</section>
+
+    <footer>
+        <p>Todos os direitos reservados</p>
+    </footer>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script src="{{url_for('static', filename='emailjs.js')}}"></script>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+
+</html>
